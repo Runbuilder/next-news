@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>카드 뉴스2</h1>
+      <h1>카드 뉴스3</h1>
       {news.map(item => (
         <div key={item.id} className="card">
           <h2>{item.제목}</h2>
