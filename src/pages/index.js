@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center p-6">
         {news.map(item => (
           <Card 
             key={item.id} 

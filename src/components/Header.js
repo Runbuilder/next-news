@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <header className="bg-blue-600 text-white p-4">
-      <h1 className="text-2xl font-bold">카드 뉴스2</h1>
+    <header className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 shadow-lg">
+      <h1 className="text-3xl font-bold text-center">카드 뉴스</h1>
     </header>
   );
 }
