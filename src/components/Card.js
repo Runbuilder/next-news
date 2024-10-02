@@ -4,7 +4,10 @@ export default function Card({ title, category, date, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => setIsOpen(true);
-  const handleClose = () => setIsOpen(false);
+  const handleClose = (e) => {
+    e.stopPropagation(); // 클릭 이벤트 전파 방지
+    setIsOpen(false);
+  };
 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg m-4 cursor-pointer" onClick={handleOpen}>
