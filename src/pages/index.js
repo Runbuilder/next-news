@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Card from '@/components/Card';
 
 export default function Home() {
   const [news, setNews] = useState([]);
@@ -21,15 +22,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>카드 뉴스3</h1>
+    <div className="flex flex-wrap justify-center">
+      <h1 className="text-3xl font-bold mb-4">카드 뉴스css</h1>
       {news.map(item => (
-        <div key={item.id} className="card">
-          <h2>{item.제목}</h2>
-          <p>{item.내용}</p>
-          <p>카테고리: {item.카테고리}</p>
-          <p>날짜: {item.날짜}</p>
-        </div>
+        <Card 
+          key={item.id} 
+          title={item.제목} 
+          content={item.내용} 
+          category={item.카테고리} 
+          date={item.날짜} 
+        />
       ))}
     </div>
   );
