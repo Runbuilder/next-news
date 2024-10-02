@@ -18,10 +18,10 @@ export default function Card({ title, category, date, content }) {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-4 rounded shadow-lg">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center" onClick={handleClose}>
+          <div className="bg-white p-4 rounded shadow-lg" onClick={(e) => e.stopPropagation()}>
             <h2 className="font-bold text-xl mb-2">{title}</h2>
-            <p>{content}</p>
+            <p className="whitespace-pre-line">{content}</p> {/* 줄바꿈 적용 */}
             <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onClick={handleClose}>
               닫기
             </button>
