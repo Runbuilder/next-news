@@ -3,21 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc; /* 밝은 배경색 */
+  --foreground: #1f2937; /* 어두운 텍스트 색상 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1f2937; /* 어두운 배경색 */
+    --foreground: #f9fafb; /* 밝은 텍스트 색상 */
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif; /* 더 세련된 폰트 */
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif; /* 헤더에 다른 폰트 적용 */
 }
 
 @layer utilities {
